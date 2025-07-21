@@ -1,0 +1,11 @@
+[Unit]
+Description=PhishDefender Background Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/PhishDefender/phishdefender.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
