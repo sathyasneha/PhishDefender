@@ -1,11 +1,12 @@
 [Unit]
-Description=PhishDefender Background Service
+Description=PhishDefender - Phishing Link Detection Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /path/to/PhishDefender/phishdefender.py
+ExecStart=/usr/bin/env python3 /usr/local/bin/phishdefender
 Restart=always
-User=root
+User=phishdefender
+Group=phishdefender
 
 [Install]
 WantedBy=multi-user.target
